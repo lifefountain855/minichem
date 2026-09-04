@@ -4,16 +4,16 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-primary-100: var(--color-sky-100);
-  --color-primary-200: var(--color-sky-200);
-  --color-primary-300: var(--color-sky-300);
-  --color-primary-400: var(--color-sky-400);
-  --color-primary-500: var(--color-sky-500);
-  --color-primary-600: var(--color-sky-600);
-  --color-primary-700: var(--color-sky-700);
-  --color-primary-800: var(--color-sky-800);
-  --color-primary-900: var(--color-sky-900);
-  --color-primary-950: var(--color-sky-950);
+  --color-primary-100: var(--color-orange-100);
+  --color-primary-200: var(--color-orange-200);
+  --color-primary-300: var(--color-orange-300);
+  --color-primary-400: var(--color-orange-400);
+  --color-primary-500: var(--color-orange-500);
+  --color-primary-600: var(--color-orange-600);
+  --color-primary-700: var(--color-orange-700);
+  --color-primary-800: var(--color-orange-800);
+  --color-primary-900: var(--color-orange-900);
+  --color-primary-950: var(--color-orange-950);
 }
 
 :root {
@@ -21,6 +21,7 @@
   color: #f1f0eb;
   background: #050505;
   font-synthesis: none;
+  text-transform: lowercase;
   text-rendering: optimizeLegibility;
 }
 .font-display { 
@@ -49,7 +50,7 @@ a {
 
 ::selection {
   color: #050505;
-  background: #d8ff38;
+  background: var(--color-primary-400);
 }
 
 .grain {
