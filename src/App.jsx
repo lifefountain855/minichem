@@ -9,7 +9,7 @@ const sections = [
   {
     number: '01',
     kicker: 'A new kind of quiet',
-    title: 'Hear the room\ndifferently.',
+    title: 'Clean your home\ndifferently.',
     copy: 'A sculptural speaker designed to disappear into the moment — then bring every detail forward.',
     align: 'items-start text-left',
   },
@@ -200,7 +200,7 @@ function RotatingProduct({ progress }) {
     
     group.current.traverse((child) => {
       if (child.isMesh && child.material) {
-        // child.material.transparent = true; //
+        child.material.transparent = true; //
         child.material.opacity = currentOpacity; //
         
         // Optional: Helps prevent glitchy internal overlapping parts
@@ -212,8 +212,8 @@ function RotatingProduct({ progress }) {
   })
 
   return (
-    <group ref={group} scale={5}>
-      <Float speed={1.2} rotationIntensity={0} floatIntensity={0.18}>
+    <group ref={group}>
+      <Float speed={1.2} rotationIntensity={0.5} floatIntensity={0.5}>
         <Suspense fallback={<ProductPlaceholder />}>
           <ModelErrorBoundary fallback={<ProductPlaceholder />}>
             <Center>
@@ -242,7 +242,7 @@ function Scene({ progress }) {
       <directionalLight position={[-4, 0, 2]} intensity={2.1} color="#8db3bd" />
       <RotatingProduct progress={progress} />
       <ContactShadows position={[0, -1.45, 0]} opacity={0.38} scale={4} blur={2.8} far={3} />
-      <Environment preset="sunset" />
+      <Environment preset="studio" />
     </Canvas>
   )
 }
@@ -295,7 +295,7 @@ function App() {
               </h1>
             </div>
             <div className="mt-8 max-w-[18rem] sm:mb-2 sm:mt-0">
-              <p className="text-sm leading-relaxed text-white/60">Scroll to explore a speaker made for the space between silence and everything else.</p>
+              <p className="text-sm leading-relaxed text-white/60">Scroll to explore the sustainable and effecient to clean.</p>
               <div className="mt-8 flex items-center gap-3 text-white/35">
                 <span className="h-px w-10 bg-primary-500" />
                 <span className="eyebrow">Keep scrolling</span>
